@@ -11,7 +11,7 @@ model:
     local_window: 512
     top_k_blocks: 4
 train:
-  batch_size: 2
+  batch_size: 4
   seq_len: 2048
   max_steps: 20000
   lr: 0.0003
@@ -23,4 +23,3 @@ data:
   eval_split: train
   tokenizer: gpt2
   streaming: true
-

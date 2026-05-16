@@ -2,6 +2,11 @@
 
 ## Main Comparison
 
+Formal runs must use fair token budgets. For each scale, keep `batch_size`,
+`seq_len`, `max_steps`, GPU count, data source, and tokenizer aligned across
+attention types unless an OOM forces a documented change. Do not use the older
+half-token NSA settings for final comparisons.
+
 Run these configs first:
 
 ```bash
