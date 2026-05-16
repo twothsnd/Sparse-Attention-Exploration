@@ -1,0 +1,9 @@
+torch>=2.2
+datasets>=2.18
+transformers>=4.40
+tokenizers>=0.15
+pyyaml>=6.0
+tqdm>=4.66
+numpy>=1.24
+pytest>=8.0
+pyarrow>=15.0

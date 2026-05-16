@@ -1,0 +1,27 @@
+model:
+  vocab_size: 50257
+  max_seq_len: 2048
+  n_layers: 6
+  n_heads: 8
+  n_embd: 512
+  dropout: 0.0
+  attention: nsa_gated
+  attention_kwargs:
+    block_size: 64
+    local_window: 512
+    top_k_blocks: 4
+train:
+  batch_size: 2
+  seq_len: 2048
+  max_steps: 20000
+  lr: 0.0003
+  log_interval: 20
+data:
+  source: local_text
+  files:
+    - data/wikitext-103/wikitext-103-v1/train-00000-of-00002.parquet
+    - data/wikitext-103/wikitext-103-v1/train-00001-of-00002.parquet
+  eval_files:
+    - data/wikitext-103/wikitext-103-v1/validation-00000-of-00001.parquet
+  text_key: text
+  tokenizer: gpt2
