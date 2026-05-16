@@ -103,4 +103,4 @@ Do not merge theoretical budget and measured latency into one claim. This reposi
 
 ## Current Experiment Direction
 
-The small local suite first compares `full`, `sliding`, `bigbird`, `nsa`, and `nsa_gated`. Because the first NSA run used a smaller per-rank batch and saw fewer tokens, the fair NSA rerun uses `local_small_nsa_b4.yaml` so the NSA token budget is comparable to the other local-small runs.
+The local small suite compares `full`, `sliding`, `bigbird`, `nsa`, and `nsa_gated` with aligned sequence length, training steps, tokenizer, data source, and per-rank batch size. `nsa_gated` remains an ablation rather than a primary baseline.

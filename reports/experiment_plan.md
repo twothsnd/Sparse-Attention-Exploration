@@ -2,10 +2,9 @@
 
 ## Main Comparison
 
-Formal runs must use fair token budgets. For each scale, keep `batch_size`,
+Formal runs must use aligned token budgets. For each scale, keep `batch_size`,
 `seq_len`, `max_steps`, GPU count, data source, and tokenizer aligned across
-attention types unless an OOM forces a documented change. Do not use the older
-half-token NSA settings for final comparisons.
+attention types unless an OOM forces a documented change.
 
 Run these configs first:
 

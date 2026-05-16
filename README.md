@@ -77,8 +77,8 @@ Single config:
 
 ```bash
 torchrun --standalone --nproc_per_node=4 -m sparse_lm.train \
-  --config configs/local_small_nsa_b4.yaml \
-  --out_dir results/local_small_fair_nsa
+  --config configs/local_small_nsa.yaml \
+  --out_dir results/local_small_nsa
 ```
 
 Run the local small comparison suite:
@@ -88,11 +88,11 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 CONFIG_PREFIX=local_small \
   scripts/run_small_suite.sh results/local_small
 ```
 
-Run the fair NSA rerun on 8 GPUs:
+Run the local NSA ablation suite on 8 GPUs:
 
 ```bash
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
-  scripts/run_fair_nsa_suite.sh results/local_small_fair_nsa
+  scripts/run_local_nsa_suite.sh results/local_small_nsa
 ```
 
 ## Evaluation And Summaries
@@ -103,10 +103,10 @@ Evaluate the local small suite:
 scripts/eval_small_suite.sh results/local_small
 ```
 
-Evaluate the fair NSA suite:
+Evaluate the local NSA ablation suite:
 
 ```bash
-scripts/eval_fair_nsa_suite.sh results/local_small_fair_nsa
+scripts/eval_local_nsa_suite.sh results/local_small_nsa
 ```
 
 Generate a Markdown summary from collected logs and CSV files:
