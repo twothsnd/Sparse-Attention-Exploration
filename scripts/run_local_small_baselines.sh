@@ -2,15 +2,15 @@
 set -euo pipefail
 
 export CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-0,1,2,3,4,5,6,7}"
-export HF_ENDPOINT="${HF_ENDPOINT:-https://hf-mirror.com}"
 
-OUT_DIR="${1:-results/local_small_nsa}"
+OUT_DIR="${1:-results/local_small_rerun_baselines}"
 LOG_DIR="${OUT_DIR}/logs"
 mkdir -p "${LOG_DIR}"
 
 CONFIGS=(
-  configs/local_small_nsa.yaml
-  configs/local_small_nsa_gated.yaml
+  configs/local_small_full.yaml
+  configs/local_small_sliding.yaml
+  configs/local_small_bigbird.yaml
 )
 
 for config in "${CONFIGS[@]}"; do

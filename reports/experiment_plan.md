@@ -6,23 +6,18 @@ Formal runs must use aligned token budgets. For each scale, keep `batch_size`,
 `seq_len`, `max_steps`, GPU count, data source, and tokenizer aligned across
 attention types unless an OOM forces a documented change.
 
-Run these configs first:
+Run the local small baseline rerun first:
 
 ```bash
-scripts/train_4gpu.sh configs/small_full.yaml results/small
-scripts/train_4gpu.sh configs/small_sliding.yaml results/small
-scripts/train_4gpu.sh configs/small_bigbird.yaml results/small
-scripts/train_4gpu.sh configs/small_nsa.yaml results/small
-scripts/train_4gpu.sh configs/small_nsa_gated.yaml results/small
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
+  scripts/run_local_small_baselines.sh results/local_small_rerun_baselines
 ```
 
 If the small runs are stable, run the medium subset:
 
 ```bash
-scripts/train_4gpu.sh configs/medium_full.yaml results/medium
-scripts/train_4gpu.sh configs/medium_bigbird.yaml results/medium
-scripts/train_4gpu.sh configs/medium_nsa.yaml results/medium
-scripts/train_4gpu.sh configs/medium_nsa_gated.yaml results/medium
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
+  scripts/run_medium_suite.sh results/medium
 ```
 
 ## Benchmarks

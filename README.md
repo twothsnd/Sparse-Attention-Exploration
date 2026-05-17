@@ -27,7 +27,7 @@ sparse_lm/
   retrieval.py        synthetic long-context retrieval probe
   summarize.py        Markdown summary generator
 configs/              tiny/small/medium and local WikiText configs
-scripts/              suite launch/eval/watch helpers
+scripts/              smoke and training-suite helpers
 tests/                correctness smoke tests
 reports/              experiment plan and technical notes
 ```
@@ -81,33 +81,21 @@ torchrun --standalone --nproc_per_node=4 -m sparse_lm.train \
   --out_dir results/local_small_nsa
 ```
 
-Run the local small comparison suite:
-
-```bash
-CUDA_VISIBLE_DEVICES=0,1,2,3 CONFIG_PREFIX=local_small \
-  scripts/run_small_suite.sh results/local_small
-```
-
-Run the local NSA ablation suite on 8 GPUs:
+Run the local small baseline rerun:
 
 ```bash
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
-  scripts/run_local_nsa_suite.sh results/local_small_nsa
+  scripts/run_local_small_baselines.sh results/local_small_rerun_baselines
+```
+
+Run the medium comparison suite:
+
+```bash
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
+  scripts/run_medium_suite.sh results/medium
 ```
 
 ## Evaluation And Summaries
-
-Evaluate the local small suite:
-
-```bash
-scripts/eval_small_suite.sh results/local_small
-```
-
-Evaluate the local NSA ablation suite:
-
-```bash
-scripts/eval_local_nsa_suite.sh results/local_small_nsa
-```
 
 Generate a Markdown summary from collected logs and CSV files:
 
