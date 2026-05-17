@@ -1,0 +1,6 @@
+config,ckpt,seq_len,batch_size,num_pairs,eval_steps,finetune_steps,accuracy,loss
+configs/local_small_full.yaml,results/local_small/local_small_full.pt,2048,32,64,100,0,0.0,12.027754983901978
+configs/local_small_sliding.yaml,results/local_small/local_small_sliding.pt,2048,32,64,100,0,0.0,11.272580375671387
+configs/local_small_bigbird.yaml,results/local_small/local_small_bigbird.pt,2048,32,64,100,0,0.0025,11.0591139793396
+configs/local_small_nsa.yaml,results/local_small/local_small_nsa.pt,2048,32,64,100,0,0.009375,10.902213268280029
+configs/local_small_nsa_gated.yaml,results/local_small/local_small_nsa_gated.pt,2048,32,64,100,0,0.0,12.568798303604126

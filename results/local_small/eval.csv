@@ -1,0 +1,6 @@
+config,ckpt,loss,ppl,steps,seq_len,batch_size
+configs/local_small_full.yaml,results/local_small/local_small_full.pt,3.9210924816131594,50.4555364251069,100,2048,2
+configs/local_small_sliding.yaml,results/local_small/local_small_sliding.pt,3.9046737146377564,49.63388246050697,100,2048,2
+configs/local_small_bigbird.yaml,results/local_small/local_small_bigbird.pt,3.9604777121543884,52.482391437859285,100,2048,2
+configs/local_small_nsa.yaml,results/local_small/local_small_nsa.pt,4.049316921234131,57.358263449004276,100,2048,2
+configs/local_small_nsa_gated.yaml,results/local_small/local_small_nsa_gated.pt,3.8994961643218993,49.377564658447795,100,2048,2

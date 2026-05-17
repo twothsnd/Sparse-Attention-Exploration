@@ -1,0 +1,16 @@
+config,attention,seq_len,avg_visible,max_visible,full_avg_visible,budget_ratio
+configs/local_small_full.yaml,full,512,256.5,512.0,256.5,1.0
+configs/local_small_full.yaml,full,1024,512.5,1024.0,512.5,1.0
+configs/local_small_full.yaml,full,2048,1024.5,2048.0,1024.5,1.0
+configs/local_small_sliding.yaml,sliding,512,256.5,512.0,256.5,1.0
+configs/local_small_sliding.yaml,sliding,1024,384.25,512.0,512.5,0.7497560977935791
+configs/local_small_sliding.yaml,sliding,2048,448.125,512.0,1024.5,0.4374084770679474
+configs/local_small_bigbird.yaml,bigbird,512,200.5,320.0,256.5,0.7816764116287231
+configs/local_small_bigbird.yaml,bigbird,1024,244.5,320.0,512.5,0.47707316279411316
+configs/local_small_bigbird.yaml,bigbird,2048,266.5,320.0,1024.5,0.26012688875198364
+configs/local_small_nsa.yaml,nsa,512,436.515625,776.0,256.5,1.7018152475357056
+configs/local_small_nsa.yaml,nsa,1024,608.015625,784.0,512.5,1.186371922492981
+configs/local_small_nsa.yaml,nsa,2048,699.765625,800.0,1024.5,0.6830313801765442
+configs/local_small_nsa_gated.yaml,nsa_gated,512,436.515625,776.0,256.5,1.7018152475357056
+configs/local_small_nsa_gated.yaml,nsa_gated,1024,608.015625,784.0,512.5,1.186371922492981
+configs/local_small_nsa_gated.yaml,nsa_gated,2048,699.765625,800.0,1024.5,0.6830313801765442
