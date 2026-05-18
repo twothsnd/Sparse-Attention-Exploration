@@ -71,6 +71,8 @@ def main() -> None:
             seq_len=seq_len,
             device=device,
             text_key=data_cfg.get("text_key", "text"),
+            num_shards=world_size,
+            shard_index=rank,
         )
     else:
         batches = hf_text_batches(

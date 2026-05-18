@@ -13,10 +13,8 @@ train:
   lr: 0.00025
   log_interval: 20
 data:
-  name: HuggingFaceFW/fineweb-edu
-  config: sample-10BT
-  split: train
-  eval_split: train
+  source: local_text
+  files:
+    - data/wikitext-103/wikitext-103-v1/train-*.parquet
   tokenizer: gpt2
-  streaming: true
-
+  text_key: text
