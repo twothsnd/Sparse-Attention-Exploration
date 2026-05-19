@@ -20,5 +20,7 @@ data:
   source: local_text
   files:
     - data/wikitext-103/wikitext-103-v1/train-*.parquet
+  eval_files:
+    - data/wikitext-103/wikitext-103-v1/validation-*.parquet
   tokenizer: gpt2
   text_key: text

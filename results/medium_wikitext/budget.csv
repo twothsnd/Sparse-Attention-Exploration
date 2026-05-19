@@ -1,0 +1,13 @@
+config,attention,seq_len,avg_visible,max_visible,full_avg_visible,budget_ratio
+configs/medium_full.yaml,full,1024,512.5,1024.0,512.5,1.0
+configs/medium_full.yaml,full,2048,1024.5,2048.0,1024.5,1.0
+configs/medium_full.yaml,full,4096,2048.5,4096.0,2048.5,1.0
+configs/medium_bigbird.yaml,bigbird,1024,244.5,320.0,512.5,0.47707316279411316
+configs/medium_bigbird.yaml,bigbird,2048,266.5,320.0,1024.5,0.26012688875198364
+configs/medium_bigbird.yaml,bigbird,4096,275.5,320.0,2048.5,0.13448865711688995
+configs/medium_nsa.yaml,nsa,1024,692.140625,912.0,512.5,1.3505183458328247
+configs/medium_nsa.yaml,nsa,2048,805.828125,928.0,1024.5,0.7865574955940247
+configs/medium_nsa.yaml,nsa,4096,874.671875,960.0,2048.5,0.4269816279411316
+configs/medium_nsa_gated.yaml,nsa_gated,1024,692.140625,912.0,512.5,1.3505183458328247
+configs/medium_nsa_gated.yaml,nsa_gated,2048,805.828125,928.0,1024.5,0.7865574955940247
+configs/medium_nsa_gated.yaml,nsa_gated,4096,874.671875,960.0,2048.5,0.4269816279411316

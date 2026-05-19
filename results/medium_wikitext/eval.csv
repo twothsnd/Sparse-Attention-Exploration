@@ -1,0 +1,5 @@
+config,ckpt,loss,ppl,steps,seq_len,batch_size
+configs/medium_full.yaml,results/medium_wikitext/medium_full.pt,3.013699131011963,20.36258464879481,100,4096,2
+configs/medium_bigbird.yaml,results/medium_wikitext/medium_bigbird.pt,3.0610723304748535,21.350439618110723,100,4096,2
+configs/medium_nsa.yaml,results/medium_wikitext/medium_nsa.pt,3.101027300357819,22.220766962007772,100,4096,2
+configs/medium_nsa_gated.yaml,results/medium_wikitext/medium_nsa_gated.pt,3.0632751989364624,21.397523669132347,100,4096,2

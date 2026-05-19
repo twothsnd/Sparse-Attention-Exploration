@@ -92,7 +92,7 @@ Run the medium comparison suite:
 
 ```bash
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
-  scripts/run_medium_suite.sh results/medium
+  scripts/run_medium_suite.sh results/medium_wikitext
 ```
 
 ## Evaluation And Summaries
